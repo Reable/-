@@ -1,0 +1,1 @@
+SELECT bikes_types.id, bikes_types.title, COUNT(DISTINCT bikes.id) as count_bikes FROM `bikes_types` INNER JOIN bikes ON bikes.type_id = bikes_types.id WHERE bikes.active=1 GROUP BY bikes_types.title ORDER BY bikes_types.id ASC;
